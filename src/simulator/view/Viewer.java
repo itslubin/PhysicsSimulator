@@ -145,11 +145,11 @@ class Viewer extends SimulationViewer {
 					repaint();
 					break;
 				case 'l':
-					_originX += 10;
+					_originX -= 10;
 					repaint();
 					break;
 				case 'j':
-					_originX -= 10;
+					_originX += 10;
 					repaint();
 					break;
 				case 'i':

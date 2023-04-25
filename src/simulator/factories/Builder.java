@@ -34,7 +34,7 @@ public abstract class Builder<T> {
 		return _desc;
 	}
 	
-	protected abstract void fillInData(JSONObject data);
+	protected void fillInData(JSONObject data) {};
 
 	protected abstract T createInstance(JSONObject data);
 }

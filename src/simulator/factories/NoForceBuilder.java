@@ -15,8 +15,4 @@ public class NoForceBuilder extends Builder<ForceLaws> {
 		
 		return new NoForce();
 	}
-
-	@Override
-	protected void fillInData(JSONObject data) {
-	}
 }

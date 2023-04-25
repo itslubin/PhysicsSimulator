@@ -30,11 +30,5 @@ public class StationaryBodyBuilder extends Builder<Body>{
 		
 		return new StationaryBody(id, gid, new Vector2D(p.getDouble(0), p.getDouble(1)), m);
 	}
-
-	@Override
-	protected void fillInData(JSONObject data) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }

@@ -86,12 +86,12 @@ public class Main {
 		try {
 			CommandLine line = parser.parse(cmdLineOptions, args);
 			parseHelpOption(line, cmdLineOptions);
+			parseModeOption(line);
 			parseInFileOption(line);
 			parseDeltaTimeOption(line);
 			parseForceLawsOption(line);
 			parseOutFileOption(line);
 			parseStepsOption(line);
-			parseModeOption(line);
 			
 			
 
@@ -211,7 +211,8 @@ public class Main {
 	}
 	
 	private static void parseModeOption(CommandLine line) throws ParseException {
-		String s = line.getOptionValue("m");
+		String s = line.getOptionValue("m", "gui");
+		
 		switch(s.toLowerCase()) {
 		case "batch" :
 			_mode = Mode.BATCH;
@@ -219,7 +220,10 @@ public class Main {
 		case "gui":
 			_mode = Mode.GUI;
 			break;
+		default:
+			throw new ParseException("Invalid mode : " + s);
 		}
+		
 	}
 
 	private static JSONObject parseWRTFactory(String v, Factory<?> factory) {

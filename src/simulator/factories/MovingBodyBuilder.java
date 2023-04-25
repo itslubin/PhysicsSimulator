@@ -30,9 +30,5 @@ public class MovingBodyBuilder extends Builder<Body> {
 		
 		return new MovingBody(id, gid, new Vector2D(p.getDouble(0), p.getDouble(1)), new Vector2D(v.getDouble(0), v.getDouble(1)), m);
 	}
-
-	@Override
-	protected void fillInData(JSONObject data) {
-	}
 	
 }
