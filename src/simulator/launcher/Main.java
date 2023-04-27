@@ -44,6 +44,8 @@ public class Main {
 	private final static Integer _stepsDefaultValue = 150;
 	private final static Double _dtimeDefaultValue = 2500.0;
 	private final static String _forceLawsDefaultValue = "nlug";
+	private final static String _gui_mode = "gui";
+	private final static String _batch_mode = "batch";
 
 	// some attributes to stores values corresponding to command-line parameters
 	//
@@ -211,13 +213,13 @@ public class Main {
 	}
 	
 	private static void parseModeOption(CommandLine line) throws ParseException {
-		String s = line.getOptionValue("m", "gui");
+		String s = line.getOptionValue("m", _gui_mode);
 		
 		switch(s.toLowerCase()) {
-		case "batch" :
+		case _batch_mode :
 			_mode = Mode.BATCH;
 			break;
-		case "gui":
+		case _gui_mode:
 			_mode = Mode.GUI;
 			break;
 		default:
