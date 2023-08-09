@@ -19,4 +19,5 @@ Physics Simulator transcends the confines of traditional learning, offering a ha
 Whether you're a space enthusiast, a student, an educator, or simply curious about the mysteries of the universe, this app is your gateway to understanding the dynamics of planets, stars, moons, and other celestial entities in an interactive and user-friendly manner.
 
 ## What I learned 📚
+During the process of building this program, I encountered different bugs related to JSON formatting and its casting to arrays. This helped me to practise with the casting of JSON into arrays and then, rearraging all this information to their respectives classes. Also, it helped me a lot refreshing my physics from high school!
 
